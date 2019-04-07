@@ -19,7 +19,7 @@ public class Main3ManachersAlgorithm {
         int mx = 0, id = 0, resLen = 0, resCenter = 0;
         for(int i=1;i<sb.length();i++){
             p[i] = mx > i? Math.min(p[2*id-i], mx-i) : 1;
-            while ((i+p[i])<sb.length()&&sb.charAt(i+p[i]) == sb.charAt(i-p[i])){
+            while ((i+p[i])<sb.length() && sb.charAt(i+p[i]) == sb.charAt(i-p[i])){
                 p[i]++;
             }
             if(mx < i + p[i]){
